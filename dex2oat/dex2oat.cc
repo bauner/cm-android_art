@@ -711,10 +711,10 @@ class WatchDog {
   static const unsigned int kSlowdownFactor = kIsDebugBuild ? 5U : 1U;
 #if ART_USE_PORTABLE_COMPILER
   // 30 minutes scaled by kSlowdownFactor.
-  static const unsigned int kWatchDogTimeoutSeconds = kSlowdownFactor * 30 * 60;
+  static const unsigned int kWatchDogTimeoutSeconds = kSlowdownFactor * 60 * 60;
 #else
   // 6 minutes scaled by kSlowdownFactor.
-  static const unsigned int kWatchDogTimeoutSeconds = kSlowdownFactor * 6 * 60;
+  static const unsigned int kWatchDogTimeoutSeconds = kSlowdownFactor * 60 * 60;
 #endif
 
   bool is_watch_dog_enabled_;
